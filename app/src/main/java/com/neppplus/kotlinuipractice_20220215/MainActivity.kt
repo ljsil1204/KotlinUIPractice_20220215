@@ -28,5 +28,21 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        btnCalculate.setOnClickListener {
+
+//            입력한 숫자 추출.
+            val inputNumber = edtNumber.text.toString().toInt() //입력한 문구를  > String으로 > Int로 변환.
+
+//            숫자는 짝수인가? => 조건문 if문 활용
+            if ( inputNumber % 2 == 0 ) {
+                Toast.makeText(this, "입력한 숫자는 짝수입니다", Toast.LENGTH_SHORT).show()
+            }
+            else {
+                Toast.makeText(this, "입력한 숫자는 홀수입니다", Toast.LENGTH_SHORT).show()
+            }
+
+
+        }
+
     }
 }
